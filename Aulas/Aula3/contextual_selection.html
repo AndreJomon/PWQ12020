@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contextual selectors</title>
+        <!--Não é necessario colocar todos os filhos-->
+        <!--Color picker-->
+        <style>
+            nav ul a:link {
+                color: violet;
+
+            }
+
+            #main time {
+                color: purple;
+            }
+
+            #main p {
+                color:green;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#">Canada</a></li>
+                <li><a href="#">Germany</a></li>
+                <li><a href="#">USA</a></li>
+                <li><a href="#">Latin America</a></li>
+            </ul>
+        </nav>
+
+        <div id="main">
+            Comments as of <time>November 15, 2019</time>
+            <div>
+                <p>By Fulano on 
+                    <time>November 15, 2019 at 12:34am</time></p>
+                <p>Who's that with you?</p>
+            </div>
+        </div>
+    </body>
+</html>

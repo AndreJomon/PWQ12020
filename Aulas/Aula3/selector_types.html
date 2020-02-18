@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Selector Types</title>
+        <style>
+            .review-area-title {
+                font-style: italic;
+                color: brown;
+            }
+
+            .comment {
+                font-family: 'Courier New', Courier, monospace;
+                font-style: oblique;
+            }
+
+            #time-format {
+                background-color: crimson;
+            }
+
+            a:link {
+                text-decoration: underline;
+                color: chocolate;
+            }
+
+            a:visited {
+                text-decoration: underline;
+                color: dimgray;
+            }
+
+            a:hover {
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            a:active {
+                background-color: gold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="review-area-title">Reviews</h1>
+        <div>
+            <p>By <a href="#1" target="_blank">Fulano</a> on <time id="time-format">February, 17 2020</time></p>
+            <p class="comment">Nice travel</p>
+        </div>
+
+        <hr>
+
+        <div>
+            <p>By <a href="#2">Susana</a> on <time id="time-format">February, 18 2020</time></p>
+            <p class="comment">I love displays</p>
+        </div>
+
+    </body>
+</html>
