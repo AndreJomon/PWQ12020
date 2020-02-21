@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Text input</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <!--Get manda as requisições pela url, utilizar "post" caso tenha uma senha envolvida-->
+        <form action="#" method="get">
+
+            <fieldset>
+                <!--O valor é enviado com referência ao name-->
+                <label for="firstname">Nome:</label> <input type="text" name="firstname"><br>
+                <label for="lastname">Sobrenome:</label> <input type="text" name="lastname"> <br>
+                <label for="password">Senha:</label> <input type="password" name="password"> <br>
+                
+                <!--Para ser mutuamente exclusivo, o name deve ser igual, o valor que é enviado ao servidor-->
+                <label for="gender">Gênero:</label>
+                <input type="radio" name="gender" value="M">Male</input>
+                <input type="radio" name="gender" value="F">Female</input>
+            </fieldset>
+            
+            
+            <br>
+            
+            <input type="radio" name="location" value="a">Asia</input>
+            <input type="radio" name="location" value="na">North America</input>
+            <input type="radio" name="location" value="sa" checked>South America</input>
+            
+            <br><br>
+            
+            <input type="checkbox" name="em"> Ensino médio completo <br>
+            <input type="checkbox" name="grad"> Ensino superior completo <br>
+            
+            <br>
+            
+            <select name="cars" id="">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="lexus">Lexus</option>
+            </select>
+            
+            <br>
+            
+            <textarea name="comments" placeholder="Tem algum comentário?" id="" cols="30" rows="10"></textarea>
+            
+            <br>
+            
+            <input type="submit" value="Enviar">
+            <br>
+            <input type="reset" value="Limpar">
+
+            <br>
+
+            <label for="">Avalie essa foto:</label>
+            <input type="number" min="1" max="5" name="rate">
+            
+            <br>
+
+            <label for="happiness">Avalie essa foto:</label>
+            <input type="range" min="1" max="10" step="1" name="happiness">
+
+            <br>
+
+            <label for="color_chooser">Escolha uma cor:</label>
+            <input type="color" name="color_chooser">
+
+            <br>
+
+            <label for="date">Escolha uma data:</label>
+            <input type="date" name="date_chooser">
+
+            <br>
+
+            <label for="date">Escolha uma data:</label>
+            <input type="datetime" name="date_chooser">
+
+        </form>
+    </body>
+</html>

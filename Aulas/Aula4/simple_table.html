@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Simple Table</title>
+
+        <style>
+            table {
+                /* border: solid 1pt black; */
+                border-top: 4px solid orangered;
+                border-bottom: solid 1px orangered;
+                border-collapse: collapse;
+                font-size: 12pt;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: left;
+            }
+
+            tbody tr:nth-child(odd) {
+                background-color: white;
+            }
+
+            td, th {
+                border: solid 1pt black;
+                padding: 10pt;
+            }
+
+            td {
+                /* border-collapse: collapse; */
+            }
+
+            th {
+                background-color: gray;
+            }
+
+            tr{
+                background-color: lightgray;
+            }
+
+            tr:hover {
+                background-color: lightpink;
+                color: green;
+            }
+
+            caption {
+                font-weight: bold;
+                padding: 0.25em 0 0.25em 0;
+                text-align: left;
+                text-transform: uppercase;
+                border-top: solid 1px orangered;
+            }
+
+            /*Centerd-text*/
+            .ct {
+                text-align: center;
+            }
+
+        </style>
+    </head>
+
+    <!--pesquisar sobre Live Server-->
+
+    <body>
+        <table>
+            <caption>Obras famosas</caption>
+            <tr>
+                <th scope="col">Titulo</th>
+                <th scope="col">Artista</th>
+                <th scope="col">Ano</th>
+                <th colspan="2" scope="colgroup"> Tamanho (Largura x Altura)</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Jacques-Louis David</td>
+                    <td class="ct">A morte de Marat</td>
+                    <td>1793</td>
+                    <td>162cm</td>
+                    <td>128cm</td>
+                </tr>
+                <tr>
+                    <!-- <td>Jacques-Louis David</td> -->
+                    <td class="ct">A intervenção das mulheres sabinas</td>
+                    <td>1799</td>
+                    <td>162cm</td>
+                    <td>128cm</td>
+                </tr>
+                <tr>
+                    <td>Gustave Courbet</td>
+                    <td class="ct">O enterro de Ornans</td>
+                    <td>1849</td>
+                    <td>314cm</td>
+                    <td>663cm</td>
+                </tr>
+                <tr>
+                    <td>Gustave Courbet</td>
+                    <td class="ct">O enterro de Ornans</td>
+                    <td>1849</td>
+                    <td>314cm</td>
+                    <td>663cm</td>
+                </tr>
+                <tr>
+                    <td>Gustave Courbet</td>
+                    <td class="ct">O enterro de Ornans</td>
+                    <td>1849</td>
+                    <td>314cm</td>
+                    <td>663cm</td>
+                </tr>
+                <tr>
+                    <td>Gustave Courbet</td>
+                    <td class="ct">O enterro de Ornans</td>
+                    <td>1849</td>
+                    <td>314cm</td>
+                    <td>663cm</td>
+                </tr>
+                <tr>
+                    <td>Gustave Courbet</td>
+                    <td class="ct">O enterro de Ornans</td>
+                    <td>1849</td>
+                    <td>314cm</td>
+                    <td>663cm</td>
+                </tr>
+                <tr>
+                    <td>Gustave Courbet</td>
+                    <td class="ct">O enterro de Ornans</td>
+                    <td>1849</td>
+                    <td>314cm</td>
+                    <td>663cm</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
