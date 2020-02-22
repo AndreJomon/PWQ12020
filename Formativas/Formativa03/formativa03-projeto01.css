@@ -1,0 +1,55 @@
+/* general text formatting */
+
+h1, h2, h3, nav, footer, th, td {
+ font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+body {
+   font-family: "Lucida Sans", Verdana, Arial, sans-serif;
+   font-size: 100%;
+}
+
+table {
+   margin: 0px auto;
+}
+
+caption {
+   background-color: rgb(137, 172, 143);
+   padding: 10px;
+}
+
+th,
+td {
+   background-color: rgb(244, 245, 246);
+   border-style: groove;
+   text-align: center;
+   padding: 5px;
+}
+
+th {
+   padding-top: 0vmin;
+   font-size: small;
+   padding-bottom: 0vmin;
+}
+
+tfoot td {
+   border-style: none;
+}
+
+.left {
+   text-align: left;
+}
+
+.right {
+   text-align: right;
+}
+
+.fieldset {
+   background-color: rgb(213, 199, 133);
+   margin: 0 35%;
+   margin-top: 1em;
+   padding: 3mm;
+}
+
+fieldset {
+   margin: 0 auto;
+}
