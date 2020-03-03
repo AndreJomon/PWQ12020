@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Mouse Events</title>
+        <meta charset="utf-8">
+
+        <script>
+            window.addEventListener("load", function () {
+                var hoverBox = document.getElementById("hover-box");
+                var greetingBox = document.getElementById("greeting-box");
+
+                hoverBox.addEventListener("mouseover", function () {
+                    var textNode = document.createTextNode("Hello");
+                    var breakNode = document.createElement("br");
+
+                    greetingBox.appendChild(textNode);
+                    greetingBox.appendChild(breakNode);
+                });
+
+                hoverBox.addEventListener("mouseout", function () {
+                    var textNode = document.createTextNode("Goodbye");
+                    var breakNode = document.createElement("br");
+
+                    greetingBox.appendChild(textNode);
+                    greetingBox.appendChild(breakNode);
+                });
+            })
+        </script>
+    </head>
+
+    <style>
+        #hover-box {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+
+
+    <body>
+        <div id="hover-box">Hover me</div>
+        <div id="greeting-box"></div>
+    </body>
+</html>

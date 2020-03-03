@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Mouse Events</title>
+        <meta charset="utf-8">
+
+        <script>
+            window.addEventListener("load", function() {
+                var form = document.getElementById("login-form");
+
+                form.addEventListener("submit", function(e) {
+                    var username = document.getElementById("username").value;
+
+                    if (username == "") {
+                        alert("Digite o username");
+                        e.preventDefault();
+                    }
+                });
+            });
+
+        </script>
+    </head>
+
+    <body>
+        <form action="#" method="GET" id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>

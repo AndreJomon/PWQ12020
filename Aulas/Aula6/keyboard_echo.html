@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Keyboard Echo</title>
+        <meta charset="utf-8">
+
+        <script>
+            window.addEventListener("load", function () {
+               document.addEventListener("keypress", function (e) {
+                   var keyPressed = e.keyCode;
+                   var character = String.fromCharCode(keyPressed);
+
+                   var t = document.createTextNode(character);
+                   var div = document.getElementById("keyboard-output");
+
+                   div.appendChild(t);
+               }) 
+            });
+        </script>
+    </head>
+
+
+    <body>
+        <div id="keyboard-output"></div>
+    </body>
+</html>

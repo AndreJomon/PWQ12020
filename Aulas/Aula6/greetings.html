@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Greetings</title>
+        <meta charset="utf-8">
+        <script>
+            window.addEventListener("load", function () {
+                var date = new Date();
+                var hourOfDay = date.getHours();
+                var greeting;
+    
+                if (hourOfDay > 4 && hourOfDay < 12) {
+                    greeting = "Good morning";
+                } else if (hourOfDay >= 12 && hourOfDay < 20) {
+                    greeting = "Good Afternoon";
+                } else {
+                    greeting = "Good night";
+                } 
+
+                // document.write("<p>" + greeting+ "</p>")
+
+                var greetingBlock = document.getElementById("greeting-block");
+
+                var greetingText = document.createTextNode(greeting);
+
+                var paragraph = document.createElement("p");
+
+                paragraph.appendChild(greetingText); //Adiciona o filho (texto), no pai (<p>)
+
+                greetingBlock.appendChild(paragraph); //Adiciona o filho (<p>), no pai (<div>)
+            })
+
+        </script>
+    </head>
+
+    <body>
+        <div id="greeting-block">
+            <p>Fulano</p>
+
+        </div>
+    </body>
+</html>
