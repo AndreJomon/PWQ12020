@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Maximum of 3 numbers</title>
+        <meta charset="utf-8">
+
+        <script>
+            "use strict";
+
+            window.addEventListener("load", 
+                function() {
+                    let first = document.getElementById("first-number");
+                    let second = document.getElementById("second-number");
+                    let third = document.getElementById("third-number");
+                    let result = document.getElementById("result");
+
+                    let validate = function (event) {
+                        let target = event.target;
+
+                        if (isNaN(target.value)) {
+                            target.classList.add("field-error");                            
+                        } else {
+                            setMaximum();
+                            target.classList.remove("field-error");
+                        }
+                    };
+
+                    let setMaximum = function() {
+                        let max = Math.max (
+                            first.value,
+                            second.value,
+                            third.value
+                        );
+                        result.innerHTML = max;
+                    };
+
+                    first.addEventListener("input", validate);
+                    second.addEventListener("input", validate);
+                    third.addEventListener("input", validate);
+                }
+            );
+        
+        </script>
+
+        <style>
+            .field-container {
+                display: table;
+            }
+
+            .field-row {
+                display: table-row;
+            }
+
+            .field-row label,
+            .field-row input {
+                display: table-cell;
+                margin: 5px;
+            }
+
+            #result {
+                height: 20px;
+                border: 1px solid black;
+                padding: 5px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .field-error {
+                border: 3px solid red;
+            }
+        
+        </style>
+
+    </head>
+
+    <body>
+        <div class="field-container">
+            <div class="field-row">
+                <label for="">First Number:</label>
+                <input type="text"
+                id="first-number"
+                name="first-number">
+            </div>
+            <div class="field-row">
+                <label for="">Second Number:</label>
+                <input type="text"
+                id="second-number"
+                name="second-number">
+            </div>
+            <div class="field-row">
+                <label for="">Third Number:</label>
+                <input type="text"
+                id="third-number"
+                name="third-number">
+            </div>
+            <div id="result"></div>
+        </div>
+    </body>
+</html>

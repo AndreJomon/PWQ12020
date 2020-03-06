@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Row dice</title>
+        <meta charset="utf-8">
+
+        <style>
+            li {
+                display: inline;
+                margin-right: 10px;
+            }
+
+            ul {
+                margin: 0;
+            }
+        </style>
+
+        <script>
+            "use strict";
+
+            let die1Image;
+            let die2Image;
+            let die3Image;
+            let die4Image;
+
+            function start() {
+                let button = document.getElementById("roll-button");
+                die1Image = document.getElementById("die1");
+                die2Image = document.getElementById("die2");
+                die3Image = document.getElementById("die3");
+                die4Image = document.getElementById("die4");
+
+                button.addEventListener("click", function () {
+                    setImage(die1Image);
+                    setImage(die2Image);
+                    setImage(die3Image);
+                    setImage(die4Image);    
+                });
+            };
+
+            function setImage(dieImage) {
+                //let dieValue = Math.floor(Math.random() * 6 + 1);
+                //IIFE = Immediately-Invoked Function Expression
+                let dieValue = (function () {
+                    let r = Math.random();
+
+                    if (r <= 1/6) return 1;
+                    else if (r<= 2/6) return 2;
+                    else if (r <- 3/6) return 3;
+                    else if (r <= 4/6) return 4;
+                    else if (r <= 5/6) return 5;
+                    return 6; 
+                })();
+
+                dieImage.setAttribute("src", "img/die" + dieValue + ".png");
+                dieImage.setAttribute("alt", "dieImage with " + dieValue + " spot(s)");
+            }
+
+            window.addEventListener("load", start);
+        </script>
+    </head>
+
+    <body>
+        <form action="#">
+            <input type="button" id="roll-button" value="Roll dice">
+        </form>
+
+        <ul>
+            <li><img id="die1" src="img/blank.png" alt="blank-img"></li>
+            <li><img id="die2" src="img/blank.png" alt="blank-img"></li>
+            <li><img id="die3" src="img/blank.png" alt="blank-img"></li>
+            <li><img id="die4" src="img/blank.png" alt="blank-img"></li>
+        </ul>
+    </body>
+</html>
