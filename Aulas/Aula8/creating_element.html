@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Creating new elements with jQuery</title>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <script>
+            $(function () {
+            // let link = $('<a><');
+            // link.attr("href", "http://www.ufabc.edu.br");
+            // link.attr("title", "Universidade Federal do ABC");
+            // link.html("UFABC");
+            // $("#example").append(link);
+
+            $('<a><').attr("href", "http://www.ufabc.edu.br")
+                .attr("title", "Universidade Federal do ABC")
+                .html("UFABC")
+                .appendTo("#example");
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <div id="example"></div>
+    </body>
+
+</html>

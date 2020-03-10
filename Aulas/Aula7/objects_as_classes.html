@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Objects as Functions</title>
+        <meta charset="utf-8">
+    </head>
+
+    <script>
+        "use strict";
+        
+        // function Dado(_cor) {
+        //     this.cor = _cor;
+        //     //this.faces =  [1, 2, 3, 4, 5, 6];
+        //     this.faces =  ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+        // }
+
+        // //Jogar no protype todas funções que não tem estado
+        // Dado.prototype.joga = function () {
+        //     let run = Math.floor(Math.random() * this.faces.length + 1)
+        //     return this.faces[run - 1];
+        // };
+
+        class Dado {
+            constructor(cor) {
+                this.cor = cor;
+                this.faces = [1, 2, 3, 4, 5, 6];
+            }
+
+            joga() {
+                let run = Math.floor(Math.random() * this.faces.length + 1)
+                return this.faces[run - 1];
+            }
+        }
+
+        window.addEventListener("load", function() {
+            let resultArea = document.getElementById("roll-result");
+            let dado = new Dado("blue");
+            let result = dado.joga();
+            let resultNode = document.createTextNode(result);
+
+            resultArea.style.color = dado.cor;  
+            resultArea.appendChild(resultNode);
+        });
+
+    </script>
+    <body>
+        <div id = "roll-result"></div>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Dynamic List</title>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <script>
+            $(function() {
+
+                let createListItem = function() {
+                    let item = $("<li>" + $("#entry").val() + "</li>");
+                    item.addClass("fadeEmphasis");
+                    return item;
+                };
+
+                $("#addTop").on("click", function() {
+                    if($("#entry").val())
+                        $("#list").prepend(createListItem());
+                });
+
+                $("#addBottom").on("click", function() {
+                    if($("#entry").val())
+                        $("#list").append(createListItem());
+                });
+            });
+        </script>
+
+        <style>
+            .fadeEmphasis {
+                animation: fadeout 2s forwards;
+                animation-delay: 0s;
+            }
+
+            @keyframes fadeout {
+                from {
+                    background-color: #E0E0E0;
+                }
+                to {
+                    background-color: white;
+                }
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="panel">
+            <label for="entry">List text: </label>
+            <input type="text" id="entry" name="entry" placeholder="Enter text for new item">
+            <br>
+            <button id="addTop">Add to top</button>
+            <button id="addBottom">Add to bottom</button>
+        </div>
+
+        <ul id="list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </body>
+
+</html>

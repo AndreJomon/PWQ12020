@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Import jQuery example</title>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <!--JavaScript puro-->
+        <!-- <script>
+            window.addEventListener("load", function() {
+                let paragraph = document.getElementById("here");
+                let links = document.querySelectorAll("ul li");
+
+                paragraph.style = "color: purple";
+                paragraph.innerHTML = "Content replaced by pure JS";
+                links.forEach(function(element) {
+                    element.style = "color: red";
+                });
+            });
+        </script> -->
+
+        <!-- Versão JQuery -->
+        <script>
+            $(function () {
+                $("#here")
+                    .css("color", "blue")
+                    .html("Content replaced by jQuery");
+                $("ul li").css("color", "purple");
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <p id="here"> HEllo <span>There</span></p>
+        <ul>
+            <li>France</li>
+            <li>Spain</li>
+            <li>Thailand</li>
+        </ul>
+    </body>
+
+</html>

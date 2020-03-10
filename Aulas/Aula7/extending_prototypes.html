@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Extending prototypes</title>
+        <meta charset="utf-8">
+    </head>
+
+    <script>
+        "use strict";
+        String.prototype.countChars = function (c) {
+            let count = 0;
+            
+            for (let i = 0; i < this.length; i++) {
+                if (this.charAt(i) == c)
+                    count++;
+            
+            };
+            return count;
+        };
+
+        window.addEventListener("load", function() {
+            let stringField = document.getElementById("string-field");
+            let resultArea = document.getElementById("result-area");
+
+            stringField.addEventListener("input", function() {
+                resultArea.childNodes[0].nodeValue = stringField.value.countChars("c");
+            });
+        });
+    </script>
+    <body>
+        <textarea name="string-field" id="string-field" cols="30" rows="15"></textarea>
+        <div id="result-area">BO</div>
+    </body>
+</html>

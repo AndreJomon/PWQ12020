@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Binding events with jQuery</title>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <script>
+            $(function() {
+                $("#example").on("click", function(){
+                    $("#message").html("You clicked the button");
+                    $(this).html("You clicked me");
+                    $(this).off("click");
+                });
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <button id="example">Click me</button>
+        <span id="message"></span>
+    </body>
+
+</html>
