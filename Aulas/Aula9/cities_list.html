@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Cities list</title>
+        <meta charset="utf-8">
+    </head>
+
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(function() {
+            $("#country").change(function() {
+                let url = "http://www.randyconnolly.com/funwebdev/services/travel/cities.php";
+                let param = `iso=${$("#country").val()}`;
+
+                $.get(url, param).done(function(data) {
+                    let selectCities = $("#cities");
+
+                    selectCities.empty();
+
+                    for (const city of data) {
+                        let op = `<option value="${city.id}">${city.name}</option>`;
+                        selectCities.append(op);
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <body>
+        <select name="country" id="country">
+            <option value="0">Select a country</option>
+            <option value="CA">Canada</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+            <option value="IT">Italy</option>
+            <option value="US">United States</option>
+        </select>
+
+        <div>
+            <select name="cities" id="cities"></select>
+        </div>
+    </body>
+</html>
