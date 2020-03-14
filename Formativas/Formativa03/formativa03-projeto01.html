@@ -82,18 +82,20 @@
    <div class="fieldset">
       <fieldset>
          <legend>Meeting Details</legend>
-         <label for="clientname">Client Name: </label><input type="text" name="firstname">
-         <br>
-         <label for="firstmeeting">First Meeting? </label> <input type="checkbox" name="firstmeeting">
-         <br>
-         <label for="clienttype">Client Type: </label> 
-            <input type="radio" name="graduation">School</input>
-            <input type="radio" name="graduation">College</input>
-            <input type="radio" name="graduation">University</input>
-         <br>
-         <label for="meetingdate">Meeting Date: </label> <input type="date" name="date">
-         <br>
-         <input type="submit" name="Submit">
+         <form action="http://www.randyconnolly.com/tests/process.php" method="get">
+            <label for="clientname">Client Name: </label><input type="text" name="firstname">
+            <br>
+            <label for="firstmeeting">First Meeting? </label> <input type="checkbox" name="firstmeeting">
+            <br>
+            <label for="clienttype">Client Type: </label> 
+               <input type="radio" name="graduation" value="school">School</input>
+               <input type="radio" name="graduation" value="college">College</input>
+               <input type="radio" name="graduation" value="university">University</input>
+            <br>
+            <label for="meetingdate">Meeting Date: </label> <input type="date" name="date">
+            <br>
+            <input type="submit">
+         </form>
       </fieldset>
    </div>
    
