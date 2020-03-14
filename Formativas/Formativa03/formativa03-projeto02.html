@@ -7,6 +7,88 @@
    <link rel="stylesheet" href="formativa03-projeto02.css" />
 </head>
 <body>
+   <form action="http://www.randyconnolly.com/tests/process.php" method="get">
+      <div class=search-bar>
+         <input type="text" name="search titles" placeholder="Search Titles">
+         <input type="button" name="search" id="search" value="Search">
+      </div>
 
+      <div class=filter-bar>
+         <select name=actions id="">
+            <option value="actions">Actions</option>
+            <option value="archive">Archive</option>
+            <option value="delete">Delete</option>
+         </select>
+         <input type="button" name="apply" id="" value="Apply">
+         <select name=genre id="">
+            <option value="baroque">Baroque</option>
+            <option value="renaissance">Renaissance</option>
+            <option value="realism">Realism</option>
+         </select>
+         <input type="button" name="filter" id="" value="Filter">
+      </div>
+
+      <div class=content>
+         <table>
+            <caption>Paintings</caption>
+            <tr>
+               <th colspan="2"></th>
+               <th>Title</th>
+               <th>Artist</th>
+               <th class="art-year">Year</th>
+               <th class="art-genre">Genre</th>
+               <th class="edit"></th>
+            </tr>
+            <tbody>
+                  <tr>
+                     <td class="art-checkbox"><input type="checkbox" name="index[]" value="0"></td>
+                     <td class="art-image"><img src="images/05030.jpg" alt=""></td>
+                     <td class="art-title">Death of Marat</td>
+                     <td class="art-autor">David, Jacques-Louis</td>
+                     <td class="art-year">1793</td>
+                     <td class="art-style">Romanticism</td>
+                     <td class="edit"><input class="edit" type="button" value="Edit"></td>
+                  </tr>
+                  <tr>
+                     <td class="art-checkbox"><input type="checkbox" name="index[]" value="1"></td>
+                     <td class="art-image"><img src="images/120010.jpg" alt=""></td>
+                     <td class="art-title">Portrait of Eleanor of Toledo</td>
+                     <td class="art-autor">Bronzino, Agnolo</td>
+                     <td class="art-year">1545</td>
+                     <td class="art-style">Mannerism</td>
+                     <td class="edit"><input class="edit" type="button" value="Edit"></td>
+                  </tr>
+                  <tr>
+                     <td class="art-checkbox"><input type="checkbox" name="index[]" value="2"></td>
+                     <td class="art-image"><img src="images/07020.jpg" alt=""></td>
+                     <td class="art-title">Liberty Leading the People</td>
+                     <td class="art-autor">Delacroix, Eugene</td>
+                     <td class="art-year">1830</td>
+                     <td class="art-style">Romanticism</td>
+                     <td class="edit"><input class="edit" type="button" value="Edit"></td>
+                  </tr>
+                  <tr>
+                     <td class="art-checkbox"><input type="checkbox" name="index[]" value="3"></td>
+                     <td class="art-image"><img src="images/13030.jpg" alt=""></td>
+                     <td class="art-title">Arrengement in Grey and Black</td>
+                     <td class="art-autor">Whistler, James Abbott</td>
+                     <td class="art-year">1871</td>
+                     <td class="art-style">Realism</td>
+                     <td class="edit"><input class="edit" type="button" value="Edit"></td>
+                  </tr>
+                  <tr>
+                     <td class="art-checkbox"><input type="checkbox" name="index[]" value="4"></td>
+                     <td class="art-image"><img src="images/06010.jpg" alt=""></td>
+                     <td class="art-title">Mademoiselle Caroline Riviere</td>
+                     <td class="art-autor">Ingres, Jean-Auguste</td>
+                     <td class="art-year">1806</td>
+                     <td class="art-style">Neo-Classicism</td>
+                     <td class="edit"><input class="edit" type="button" value="Edit"></td>
+                  </tr>
+            </tbody>
+         </table>
+      </div>
+      <input type="submit">
+   </form>
 </body>
 </html>

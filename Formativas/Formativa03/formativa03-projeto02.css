@@ -6,4 +6,75 @@ h1, h2, h3, nav, footer {
 body {
    font-family: "Lucida Sans", Verdana, Arial, sans-serif;
    font-size: 100%;
+   margin-right: 10%;
+   margin-left: 10%;
+}
+
+.search-bar,
+.filter-bar,
+.content {
+   background-color: rgb(142, 196, 209);
+   border: solid 1px lightslategray;
+   padding: 2%;
+   margin: 1%;
+}
+
+.content {
+   background-color: white;
+}
+
+input.edit {
+   background-image: url("images/edit16.png");
+   padding-left: 50%;
+   text-align: center;
+   background-repeat: no-repeat;
+}
+
+caption {
+   font-weight: bold;
+   background-color: rgb(12, 167, 206);
+   padding-top: 1%;
+   padding-bottom: 1%;
+}
+
+table {
+   margin: 1%;
+   margin-right: 10%;
+   border-collapse: collapse;
+}
+
+th {
+   background-color: rgb(142, 196, 209);
+   text-align: left;
+}
+
+th,
+td {
+   border-bottom: solid 2px lightslategray;
+   border-collapse: collapse;
+   margin-right: 50px;
+   width: 15%;
+   padding-top: 1%;
+   padding-bottom: 1%;
+}
+
+td.art-checkbox {
+   width: 5%;
+}
+
+.art-image {
+   width: 10%;
+}
+
+.art-year {
+   width: 6%;
+}
+
+.art-genre {
+   width: 5%;
+}
+
+td.edit,
+th.edit {
+   width: 5%;
 }
