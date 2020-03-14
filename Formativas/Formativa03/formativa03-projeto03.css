@@ -6,4 +6,20 @@ h1, h2, h3, nav, footer {
 body {
    font-family: "Lucida Sans", Verdana, Arial, sans-serif;
    font-size: 100%;
+   margin-left: 10%;
+   margin-right: 10%;
+   margin-top: 5%;
+}
+
+.search-bar {
+   background-color: lightskyblue;
+}
+
+table {
+   border: solid black;
+   
+}
+
+legend {
+   text-align: center;
 }

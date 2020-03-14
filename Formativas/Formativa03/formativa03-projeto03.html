@@ -7,6 +7,151 @@
    <link rel="stylesheet" href="formativa03-projeto03.css" />
 </head>
 <body>
+   <fieldset>
+      <legend>Photos Details</legend>
+      <table>
+         <tr>
+            <td>Title</td>
+         </tr>
+         <tr>
+            <td><input type="text" name="title" id=""></td>
+         </tr>
+         <tr>
+            <td>Description</td>
+         </tr>
+         <tr>
+            <td><input type="text"></td>
+         </tr>
+         <tr>
+            <td>
+               <table>
+                  <tr>
+                     <td>Continent</td>
+                  </tr>
+                  <tr>
+                     <td><select name="continent" id="">
+                        <option value="na">North America</option>
+                        <option value="sa">South America</option>
+                        <option value="as">Asia</option>
+                        <option value="af">Africa</option>
+                        <option value="eur">Europe</option>
+                     </select></td>
+                  </tr>
+                  <tr>
+                     <td>Country</td>
+                  </tr>
+                  <tr>
+                     <td><select name="country" id="">
+                        <option value="br">Brazil</option>
+                        <option value="usa">United States of America</option>
+                        <option value="as">Japan</option>
+                        <option value="af">Spain</option>
+                        <option value="eur">Egypt</option>
+                     </select></td>
+                  </tr>
+                  <tr>
+                     <td>City</td>
+                  </tr>
+                  <tr>
+                     <td><input type="text" name="city" id=""></td>
+                  </tr>
+               </table>
+            </td>
+            <td> 
+               <table>
+                  <tr>
+                     
+                     <table>
+                        <tr>
+                           <td>Copyright</td>
+                        </tr>
+                        <tr>
+                           <td><input type="radio" name="copyright" value="allrightsreserved">All Rights Reserved</td>
+                        </tr>
+                        <tr>
+                           <td><input type="radio" name="copyright" value="creativecommons">Creative Commons</td>
+                        </tr>
+                     </table>
 
+                     <table>
+                        <tr>
+                           <td>Creative Commons Types</td>
+                        </tr>
+                        <tr>
+                           <td><input type="checkbox" name="cctCH" value="attr">Attribution</td>
+                        </tr>
+                        <tr>
+                           <td><input type="checkbox" name="cctCH" value="nonC">NonCommercial</td>
+                        </tr>
+                        <tr>
+                           <td><input type="checkbox" name="cctCH" value="nonD">No Derivative Works</td>
+                        </tr>
+                        <tr>
+                           <td><input type="checkbox" name="cctCH" value="shareA">Share Alike</td>
+                     </table>
+
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>I accept the software license <input type="checkbox" name="accept"></td>
+         </tr>
+         <tr>
+            <td>
+               <table>
+                  <tr>
+                     <td>
+                        Rate this photos
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <input type="number" min="1" max="10" name="rate">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        Color Colection
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <input type="color" name="color_chooser">
+                     </td>
+                  </tr>
+               </table>
+            </td>
+            <td>
+               <table>
+                  <tr>
+                     <td>
+                        Date Taken
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <input type="date" name="date_chooser">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        Time Taken
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <input type="datetime" name="time_chooser">
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td><input type="submit"></td>
+            <td><input type="reset"></td>
+         </tr>
+      </table>
+   </fieldset>
 </body>
 </html>
