@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>COVID-19 Tracker</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <input list="countries" id="countrySelected1" onchange="changeFocusCountry('1')">
+        <datalist id="countries">
+        </datalist>
+        <input list="countries" id="countrySelected2" onchange="changeFocusCountry('2')">
+        <datalist id="countries">
+        </datalist>
+        <input list="countries" id="countrySelected3" onchange="changeFocusCountry('3')">
+        <datalist id="countries">
+        </datalist>
+        <table>
+            <tr>
+                <th></th>
+                <th id="option1">World</th>
+                <th id="option2">World</th>
+                <th id="option3">World</th>
+            </tr>
+            <tr>
+                <td>Confirmed</td>
+                <td id="confirmed1"></td>
+                <td id="confirmed2"></td>
+                <td id="confirmed3"></td>
+            </tr>
+            <tr>
+                <td>New Confirmed</td>
+                <td id="confirmed-delta1"></td>
+                <td id="confirmed-delta2"></td>
+                <td id="confirmed-delta3"></td>
+            </tr>
+            <tr>
+                <td>Deaths</td>
+                <td id="deaths1"></td>
+                <td id="deaths2"></td>
+                <td id="deaths3"></td>
+            </tr>
+            <tr>
+                <td>New deaths</td>
+                <td id="deaths-delta1"></td>
+                <td id="deaths-delta2"></td>
+                <td id="deaths-delta3"></td>
+            </tr>
+            <tr>
+                <td>Recovered</td>
+                <td id="recovered1"></td>
+                <td id="recovered2"></td>
+                <td id="recovered3"></td>
+            </tr>
+            <tr>
+                <td>New recovered</td>
+                <td id="recovered-delta1"></td>
+                <td id="recovered-delta2"></td>
+                <td id="recovered-delta3"></td>
+            </tr>
+
+            <caption>
+                Last updated: <span id="last-updated"></span>
+                <br>
+                Sourch: Johns Hopkins CSSE
+            </caption>
+        </table>        
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="app.js"></script>
+
+</html>

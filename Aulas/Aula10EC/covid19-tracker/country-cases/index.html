@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>COVID-19 Tracker</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <input list="countries" id="countrySelected" onchange="changeFocusCountry()">
+        <datalist id="countries">
+        </datalist>
+        <table>
+            <tr>
+                <th></th>
+                <th id="option">World</th>
+            </tr>
+            <tr>
+                <td>Confirmed</td>
+                <td id="confirmed"></td>
+            </tr>
+            <tr>
+                <td>New Confirmed</td>
+                <td id="confirmed-delta"></td>
+            </tr>
+            <tr>
+                <td>Deaths</td>
+                <td id="deaths"></td>
+            </tr>
+            <tr>
+                <td>New deaths</td>
+                <td id="deaths-delta"></td>
+            </tr>
+            <tr>
+                <td>Recovered</td>
+                <td id="recovered"></td>
+            </tr>
+            <tr>
+                <td>New recovered</td>
+                <td id="recovered-delta"></td>
+            </tr>
+
+            <caption>
+                Last updated: <span id="last-updated"></span>
+                <br>
+                Sourch: Johns Hopkins CSSE
+            </caption>
+        </table>        
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="app.js"></script>
+
+</html>
